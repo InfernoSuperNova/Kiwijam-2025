@@ -1,5 +1,6 @@
 using Godot;
-namespace ArchitectsInVoid.Audio;
+
+namespace Kiwijam2025.FmodServer;
 
 public class FmodDspSettings : FmodGdAPI
 {

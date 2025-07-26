@@ -3,7 +3,7 @@ using Godot;
 using Godot.Collections;
 using Array = Godot.Collections.Array;
 
-namespace ArchitectsInVoid.Audio;
+namespace Kiwijam2025.FmodServer;
 
 /// <summary>
 /// A GDscript to C# wrapper for FMOD bindings
@@ -154,7 +154,7 @@ public static class FmodServer
 
     public static float GetGlobalParameterById(int id)
     {
-        return (int)FmodCall("get_global_parameter_by_id", id);
+        return (float)FmodCall("get_global_parameter_by_id", id);
     }
 
     public static float GetGlobalParameterByName(string name)

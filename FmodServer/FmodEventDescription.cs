@@ -1,8 +1,7 @@
 using Godot;
 using Godot.Collections;
-using Godot.NativeInterop;
 
-namespace ArchitectsInVoid.Audio;
+namespace Kiwijam2025.FmodServer;
 
 public class FmodEventDescription : FmodGdAPI
 {

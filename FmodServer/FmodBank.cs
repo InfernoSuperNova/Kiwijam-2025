@@ -1,7 +1,7 @@
 using Godot;
 using Godot.Collections;
 
-namespace ArchitectsInVoid.Audio;
+namespace Kiwijam2025.FmodServer;
 
 public class FmodBank : FmodGdAPI
 {
