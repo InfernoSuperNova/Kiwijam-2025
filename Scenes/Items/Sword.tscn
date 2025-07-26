@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://c63olno6a4wye"]
+
+[ext_resource type="Script" uid="uid://cl5x30akftai2" path="res://Scripts/Sword.cs" id="1_6l4sq"]
+[ext_resource type="PackedScene" uid="uid://soxqd06t14dd" path="res://Models/Sword.fbx" id="2_8kelq"]
+
+[node name="Sword" type="Node3D"]
+script = ExtResource("1_6l4sq")
+
+[node name="Sword" parent="." instance=ExtResource("2_8kelq")]
