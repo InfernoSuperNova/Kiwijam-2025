@@ -18,6 +18,18 @@ public enum Sin
     Sloth
 }
 
+public struct PointGen
+{
+    public float Base;
+    public float AddPreMul;
+    public float Mul;
+    public float AddPostMul;
+
+    public float Value => (Base + AddPreMul) * Mul + AddPostMul;
+    public static implicit operator float(PointGen p) => p.Value;
+}
+
+
 public abstract partial class Item : Node3D
 {
     #region static
@@ -73,6 +85,18 @@ public abstract partial class Item : Node3D
     public Vector2I GridPosition;
 
     public ItemEffect Effect;
+
+
+
+    
+    #region pointgen
+
+    public PointGen sp;
+    public PointGen mp;
+    public PointGen lp;
+
+    #endregion
+    
     #endregion
 
     #region methods
@@ -97,8 +121,13 @@ public partial class Sword : Item
 {
     public Sword()
     {
-        Sin = Sin.Pride;
+        Sin = Sin.Wrath;
         Effect = new SwordEffect();
+        //TODO: Fill these out
+        sp.Base = 0;
+        mp.Base = 0;
+        lp.Base = 0;
+        
     }
 
     public override void _PlaceItem()
@@ -121,11 +150,18 @@ public partial class SwordEffect : ItemEffect
         switch (right.Sin)
         {
             case Sin.Pride:
-                GD.Print("Sword effect: Set all points to 20 (placeholder)");
+                GD.Print("Sword effect: Set all points to 20");
+                i.sp.Base = 20;
+                i.mp.Base = 20;
+                i.lp.Base = 20;
+                i.sp.AddPreMul = 0;
+                i.mp.AddPreMul = 0;
+                i.lp.AddPreMul = 0;
                 break;
 
             case Sin.Greed:
-                GD.Print("Sword effect: Give 5 MP (placeholder)");
+                GD.Print("Sword effect: Give 5 MP");
+                i.mp.AddPreMul += 5;
                 break;
 
             case Sin.Envy:
@@ -142,6 +178,60 @@ public partial class SwordEffect : ItemEffect
                 GD.Print($"Sword effect: No special effect for {right.Sin}");
                 break;
         } 
+    }
+}
+#endregion
+#region Pan
+
+public partial class Pan : Item
+{
+    public Pan()
+    {
+        Sin = Sin.Wrath;
+        Effect = new PanEffect();
+        sp.Base = 5;
+        mp.Base = 0;
+        lp.Base = 0;
+    }
+    public override void _PlaceItem()
+    {
+        base._PlaceItem();
+        Effect.Apply(this);
+    }
+}
+
+public partial class PanEffect : ItemEffect
+{
+    public override void Apply(Item i)
+    {
+        base.Apply(i);
+        
+        
+        // Halves the point output if items to the left and right
+        // Adds half of the items to the left and right to itself
+        var left  = i.GetRelative(new Vector2I(-1, 0));
+        if (left != null)
+        {
+            i.sp.AddPreMul += left.sp;
+            i.mp.AddPreMul += left.mp;
+            i.lp.AddPreMul += left.lp;
+
+            left.sp.Mul *= 0.5f;
+            left.mp.Mul *= 0.5f;
+            left.lp.Mul *= 0.5f;
+        }
+        var right = i.GetRelative(new Vector2I(1, 0));
+        if (right != null)
+        {
+            i.sp.AddPreMul  += right.sp;
+            i.mp.AddPreMul  += right.mp;
+            i.lp.AddPreMul += right.lp;
+            
+            right.sp.Mul *= 0.5f;
+            right.mp.Mul *= 0.5f;
+            right.lp.Mul *= 0.5f;
+        }
+        
     }
 }
 #endregion
