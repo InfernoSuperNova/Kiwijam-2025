@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://soxqd06t14dd"
-path="res://.godot/imported/Sword.fbx-fc1a9fbd344e7c6ebb95de8f64b5dc95.scn"
+uid="uid://bimnuoo5iy7xw"
+path="res://.godot/imported/BoxingGlove.fbx-b715e07cf670e86a43e35f5e9aa43a31.scn"
 
 [deps]
 
-source_file="res://Models/Sword.fbx"
-dest_files=["res://.godot/imported/Sword.fbx-fc1a9fbd344e7c6ebb95de8f64b5dc95.scn"]
+source_file="res://Models/BoxingGlove.fbx"
+dest_files=["res://.godot/imported/BoxingGlove.fbx-b715e07cf670e86a43e35f5e9aa43a31.scn"]
 
 [params]
 

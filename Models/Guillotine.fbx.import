@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://soxqd06t14dd"
-path="res://.godot/imported/Sword.fbx-fc1a9fbd344e7c6ebb95de8f64b5dc95.scn"
+uid="uid://dn6l0xuq7qwh3"
+path="res://.godot/imported/Guillotine.fbx-fd2def0a48b81621a9bb140892127cb1.scn"
 
 [deps]
 
-source_file="res://Models/Sword.fbx"
-dest_files=["res://.godot/imported/Sword.fbx-fc1a9fbd344e7c6ebb95de8f64b5dc95.scn"]
+source_file="res://Models/Guillotine.fbx"
+dest_files=["res://.godot/imported/Guillotine.fbx-fd2def0a48b81621a9bb140892127cb1.scn"]
 
 [params]
 

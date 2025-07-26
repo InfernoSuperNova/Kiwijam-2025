@@ -1,6 +1,178 @@
-[gd_scene format=3 uid="uid://bvhvdbpedau06"]
+[gd_scene load_steps=3 format=3 uid="uid://bvhvdbpedau06"]
+
+[ext_resource type="PackedScene" uid="uid://soxqd06t14dd" path="res://Models/Sword.fbx" id="1_ebmjs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ebmjs"]
+bg_color = Color(0.249891, 0.284266, 0.418685, 1)
 
 [node name="Game" type="Node3D"]
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.908377, -0.313559, 0.276644, 0, 0.661587, 0.749869, -0.418152, -0.681163, 0.60097, 0.290003, 2.45709, 1.37917)
+transform = Transform3D(1, 0, 0, 0, 0.374607, 0.927184, 0, -0.927184, 0.374607, 0.5, 3.018, 2.411)
+
+[node name="Items" type="Node3D" parent="."]
+
+[node name="Sword" parent="Items" instance=ExtResource("1_ebmjs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.503877, 0.0308218, 0.53412)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.691954, 0.580248, -0.429549, 2.40989e-08, 0.594991, 0.803732, 0.721941, -0.556146, 0.411707, -2.45524, 2.02305, 0.754217)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Activate" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -77.0
+offset_top = -129.0
+offset_right = 78.0
+offset_bottom = -72.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/h_separation = 0
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 18
+text = "Activate Items!"
+
+[node name="Shop Button" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 433.0
+offset_top = -466.0
+offset_right = 520.0
+offset_bottom = -409.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/h_separation = 0
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 18
+text = "Shop"
+
+[node name="Shop" type="Control" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control/Shop"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0343413, 0.0284118, 0.094524, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Shop/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.995
+offset_left = 70.0
+offset_top = 70.0
+offset_right = -70.0
+offset_bottom = -70.0
+theme_override_constants/separation = 80
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Shop/ColorRect/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 90
+
+[node name="Button" type="Button" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_ebmjs")
+text = "Sword"
+
+[node name="Button2" type="Button" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_ebmjs")
+text = "Sword"
+
+[node name="Button3" type="Button" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_ebmjs")
+text = "Sword"
+
+[node name="Button4" type="Button" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_ebmjs")
+text = "Sword"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/Shop/ColorRect/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 90
+
+[node name="Button" type="Button" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_ebmjs")
+text = "Sword"
+
+[node name="Button2" type="Button" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_ebmjs")
+text = "Sword"
+
+[node name="Button3" type="Button" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_ebmjs")
+text = "Sword"
+
+[node name="Button4" type="Button" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_ebmjs")
+text = "Sword"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Control/Shop/ColorRect/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 90
+
+[node name="Button" type="Button" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_ebmjs")
+text = "Sword"
+
+[node name="Button2" type="Button" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_ebmjs")
+text = "Sword"
+
+[node name="Button3" type="Button" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_ebmjs")
+text = "Sword"
+
+[node name="Button4" type="Button" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_ebmjs")
+text = "Sword"
