@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://bvhvdbpedau06"]
 
-[ext_resource type="PackedScene" uid="uid://soxqd06t14dd" path="res://Models/Sword.fbx" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://drpkmrfh0vnxx" path="res://Scripts/Game.cs" id="1_i6g32"]
 [ext_resource type="PackedScene" uid="uid://dtm7jsugmxvtu" path="res://Scenes/ActiveItemSlot.tscn" id="2_1l0tm"]
 [ext_resource type="PackedScene" uid="uid://jqln0sad2ada" path="res://Models/Item_Slot_Dark.fbx" id="2_3dryh"]
 [ext_resource type="PackedScene" uid="uid://cn7dk47nau5g4" path="res://Models/Item_Slot.fbx" id="2_qxrlw"]
 [ext_resource type="Script" uid="uid://2ka4jycgsxuy" path="res://Scripts/TopBar.cs" id="3_wrm1d"]
+[ext_resource type="Script" uid="uid://j8sl35arlwio" path="res://Scripts/ShopItem.cs" id="6_1l0tm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ebmjs"]
 bg_color = Color(0.249891, 0.284266, 0.418685, 1)
@@ -23,9 +23,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -0.5)
 
 [node name="Item_Slot" parent="ItemSlots/Active" instance=ExtResource("2_1l0tm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0.5)
-
-[node name="Sword" parent="ItemSlots/Active/Item_Slot" instance=ExtResource("1_ebmjs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.031, 0)
 
 [node name="Item_Slot2" parent="ItemSlots/Active" instance=ExtResource("2_1l0tm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0.5)
@@ -139,11 +136,29 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 90
 
-[node name="Sword" type="Button" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer"]
+[node name="ShopItem" type="Control" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+script = ExtResource("6_1l0tm")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/ShopItem"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Item" type="Button" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/ShopItem/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme_override_styles/normal = SubResource("StyleBoxFlat_ebmjs")
 text = "Sword"
+
+[node name="Label" type="RichTextLabel" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/ShopItem/VBoxContainer"]
+layout_mode = 2
+text = "Cost: 1"
 
 [node name="Button2" type="Button" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer"]
 layout_mode = 2
@@ -269,5 +284,6 @@ offset_bottom = 59.0
 text = "Shop"
 
 [connection signal="pressed" from="Control/Activate" to="." method="ActivateButton"]
+[connection signal="pressed" from="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/ShopItem/VBoxContainer/Item" to="." method="BuyItem" binds= ["Sword"]]
 [connection signal="pressed" from="Control/ColorRect/BackButton" to="Control/ColorRect" method="BackButton"]
 [connection signal="pressed" from="Control/ColorRect/ShopButton" to="Control/ColorRect" method="ShopButton"]
