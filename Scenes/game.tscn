@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://dtm7jsugmxvtu" path="res://Scenes/ActiveItemSlot.tscn" id="2_1l0tm"]
 [ext_resource type="PackedScene" uid="uid://jqln0sad2ada" path="res://Models/Item_Slot_Dark.fbx" id="2_3dryh"]
 [ext_resource type="PackedScene" uid="uid://cn7dk47nau5g4" path="res://Models/Item_Slot.fbx" id="2_qxrlw"]
-[ext_resource type="Script" uid="uid://2ka4jycgsxuy" path="res://Scripts/TopBar.cs" id="3_wrm1d"]
-[ext_resource type="Script" uid="uid://j8sl35arlwio" path="res://Scripts/ShopItem.cs" id="6_1l0tm"]
+[ext_resource type="Script" uid="uid://c3cvulfbk4o4a" path="res://Scripts/TopBar.cs" id="3_wrm1d"]
+[ext_resource type="Script" uid="uid://t7444k6rm4fc" path="res://Scripts/ShopItem.cs" id="6_1l0tm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ebmjs"]
 bg_color = Color(0.249891, 0.284266, 0.418685, 1)
@@ -15,6 +15,7 @@ script = ExtResource("1_i6g32")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.374607, 0.927184, 0, -0.927184, 0.374607, 0, 3.018, 1.60378)
+current = true
 
 [node name="ItemSlots" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -0.5)
@@ -284,6 +285,5 @@ offset_bottom = 59.0
 text = "Shop"
 
 [connection signal="pressed" from="Control/Activate" to="." method="ActivateButton"]
-[connection signal="pressed" from="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/ShopItem/VBoxContainer/Item" to="." method="BuyItem" binds= ["Sword"]]
 [connection signal="pressed" from="Control/ColorRect/BackButton" to="Control/ColorRect" method="BackButton"]
 [connection signal="pressed" from="Control/ColorRect/ShopButton" to="Control/ColorRect" method="ShopButton"]

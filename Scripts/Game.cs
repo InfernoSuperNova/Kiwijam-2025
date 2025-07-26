@@ -3,6 +3,7 @@ using Kiwijam2025.Debug;
 using System;
 using System.Collections.Generic;
 using System.Xml.Linq;
+using Kiwijam2025.Scripts.Items;
 
 public partial class Game : Node3D
 {
@@ -63,9 +64,9 @@ public partial class Game : Node3D
         activationText.Text = "Activations Left: " + activations;
 
         foreach(StaticBody3D itemSlot in itemSlots) {
-            if(itemSlot.GetChildren().Count == 5 && itemSlot.GetChild(4) is TempItem item)
+            if(itemSlot.GetChildren().Count == 5 && itemSlot.GetChild(4) is Item item)
             {
-                points += item.GeneratePoints();
+                points += item._GeneratePoints();
             }
         }
         
