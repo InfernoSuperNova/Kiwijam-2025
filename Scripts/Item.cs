@@ -18,18 +18,18 @@ public enum Sin
     Sloth
 }
 
-public struct PointGen
+public struct PointGen()
 {
-    public float Base;
-    public float AddPreMul;
-    public float Mul;
-    public float AddPostMul;
+    public float Base = 0;
+    public float AddPreMul = 0;
+    public float Mul = 1;
+    public float AddPostMul = 0;
 
     public float Value => (Base + AddPreMul) * Mul + AddPostMul;
     public static implicit operator float(PointGen p) => p.Value;
 }
 
-
+#region ItemBase
 public abstract partial class Item : Node3D
 {
     #region static
@@ -66,7 +66,7 @@ public abstract partial class Item : Node3D
         ItemGrid.Remove(GridPosition);
     }
 
-    public virtual void _PlaceItem()
+    public virtual void _ActivateItem()
     {
         GD.Print($"{GetType().Name} placed at {GridPosition}");
         Effect.Apply(this);
@@ -115,7 +115,37 @@ public partial class ItemEffect
 {
     public virtual void Apply(Item I) {}
 }
+#endregion
+#region ItemTemplate
+public partial class ItemTemplate : Item
+{
+    public ItemTemplate()
+    {
+        // set the sin, effect, and point bases
+        Sin = Sin.Pride;
+        Effect = new ItemTemplateEffect(); // We have this as a field so that effects can be swapped out at runtime
+        sp.Base = 0;
+        mp.Base = 0;
+        lp.Base = 0;
+        
+    }
 
+    // Hook into event functions to trigger the effect
+    public override void _ActivateItem()
+    {
+        base._ActivateItem();
+        Effect.Apply(this);
+    }
+}
+
+public partial class ItemTemplateEffect : ItemEffect
+{
+    public override void Apply(Item I)
+    {
+        // Put your effect functionality in here
+    }
+}
+#endregion
 #region Sword
 public partial class Sword : Item
 {
@@ -130,9 +160,9 @@ public partial class Sword : Item
         
     }
 
-    public override void _PlaceItem()
+    public override void _ActivateItem()
     {
-        base._PlaceItem();
+        base._ActivateItem();
         Effect.Apply(this);
     }
 }
@@ -150,18 +180,11 @@ public partial class SwordEffect : ItemEffect
         switch (right.Sin)
         {
             case Sin.Pride:
-                GD.Print("Sword effect: Set all points to 20");
-                i.sp.Base = 20;
-                i.mp.Base = 20;
-                i.lp.Base = 20;
-                i.sp.AddPreMul = 0;
-                i.mp.AddPreMul = 0;
-                i.lp.AddPreMul = 0;
+                GD.Print("Sword effect: Set all points to 20 (placeholder, set player wallet points)");
                 break;
 
             case Sin.Greed:
-                GD.Print("Sword effect: Give 5 MP");
-                i.mp.AddPreMul += 5;
+                GD.Print("Sword effect: Give 5 MP (placeholder, set player wallet points)");
                 break;
 
             case Sin.Envy:
@@ -193,9 +216,9 @@ public partial class Pan : Item
         mp.Base = 0;
         lp.Base = 0;
     }
-    public override void _PlaceItem()
+    public override void _ActivateItem()
     {
-        base._PlaceItem();
+        base._ActivateItem();
         Effect.Apply(this);
     }
 }
@@ -232,6 +255,59 @@ public partial class PanEffect : ItemEffect
             right.lp.Mul *= 0.5f;
         }
         
+    }
+}
+#endregion
+#region Boxing Glove
+
+public partial class BoxingGlove : Item
+{
+    public BoxingGlove()
+    {
+        Sin = Sin.Wrath;
+        Effect = new BoxingGloveEffect();
+        sp.Base = 0;
+        mp.Base = 0;
+        lp.Base = 0;
+        // TODO: Subtract SP from the player's wallet
+        
+    }
+}
+
+public partial class BoxingGloveEffect : ItemEffect
+{
+    public override void Apply(Item i)
+    {
+    }
+}
+#endregion
+#region Guillotine
+public partial class Guillotine : Item
+{
+    public Guillotine()
+    {
+        // set the sin, effect, and point bases
+        Sin = Sin.Wrath;
+        Effect = new GuillotineEffect(); // We have this as a field so that effects can be swapped out at runtime
+        sp.Base = 0;
+        mp.Base = 0;
+        lp.Base = 0;
+        
+    }
+
+    // Hook into event functions to trigger the effect
+    public override void _ActivateItem()
+    {
+        base._ActivateItem();
+        Effect.Apply(this);
+    }
+}
+
+public partial class GuillotineEffect : ItemEffect
+{
+    public override void Apply(Item I)
+    {
+        // Put your effect functionality in here
     }
 }
 #endregion
