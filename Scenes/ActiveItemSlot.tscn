@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://dtm7jsugmxvtu"]
+
+[ext_resource type="PackedScene" uid="uid://cn7dk47nau5g4" path="res://Models/Item_Slot.fbx" id="1_5jqyf"]
+[ext_resource type="PackedScene" uid="uid://bptdawrm5ll2s" path="res://Models/Item_Slot_Red.fbx" id="2_q6owv"]
+[ext_resource type="PackedScene" uid="uid://jqln0sad2ada" path="res://Models/Item_Slot_Dark.fbx" id="3_4c51s"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ckthp"]
+size = Vector3(1, 0.269775, 1)
+
+[node name="CollisionShape3D" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.000610352, 0)
+shape = SubResource("BoxShape3D_ckthp")
+
+[node name="Item_Slot" parent="." instance=ExtResource("1_5jqyf")]
+
+[node name="Item_Slot_Red" parent="." instance=ExtResource("2_q6owv")]
+visible = false
+
+[node name="Item_Slot_Dark" parent="." instance=ExtResource("3_4c51s")]
+visible = false
