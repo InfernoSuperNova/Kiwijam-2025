@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dtm7jsugmxvtu" path="res://Scenes/ActiveItemSlot.tscn" id="2_1l0tm"]
 [ext_resource type="PackedScene" uid="uid://jqln0sad2ada" path="res://Models/Item_Slot_Dark.fbx" id="2_3dryh"]
 [ext_resource type="PackedScene" uid="uid://cn7dk47nau5g4" path="res://Models/Item_Slot.fbx" id="2_qxrlw"]
-[ext_resource type="Script" uid="uid://cbk8k6ge2sn4o" path="res://Scripts/TopBar.cs" id="3_wrm1d"]
+[ext_resource type="Script" uid="uid://2ka4jycgsxuy" path="res://Scripts/TopBar.cs" id="3_wrm1d"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ebmjs"]
 bg_color = Color(0.249891, 0.284266, 0.418685, 1)
@@ -268,5 +268,6 @@ offset_right = 136.0
 offset_bottom = 59.0
 text = "Shop"
 
+[connection signal="pressed" from="Control/Activate" to="." method="ActivateButton"]
 [connection signal="pressed" from="Control/ColorRect/BackButton" to="Control/ColorRect" method="BackButton"]
 [connection signal="pressed" from="Control/ColorRect/ShopButton" to="Control/ColorRect" method="ShopButton"]
