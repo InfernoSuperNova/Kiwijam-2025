@@ -176,3 +176,48 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/normal = SubResource("StyleBoxFlat_ebmjs")
 text = "Sword"
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -589.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.396069, 0.380349, 0.429454, 1)
+
+[node name="Points" type="RichTextLabel" parent="Control/ColorRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -116.0
+offset_right = 117.0
+offset_bottom = 59.0
+grow_horizontal = 2
+text = "Points: 123456789"
+vertical_alignment = 1
+
+[node name="Activations" type="RichTextLabel" parent="Control/ColorRect"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -233.0
+offset_bottom = 59.0
+grow_horizontal = 0
+text = "Activations Left: 500"
+vertical_alignment = 1
+
+[node name="Back" type="Button" parent="Control/ColorRect"]
+layout_mode = 0
+offset_right = 136.0
+offset_bottom = 59.0
+text = "Back"
+
+[node name="Shop" type="Button" parent="Control/ColorRect"]
+layout_mode = 0
+offset_right = 136.0
+offset_bottom = 59.0
+text = "Shop"
