@@ -34,11 +34,17 @@ public struct PointGen()
 public abstract partial class Item : Node3D
 {
     #region static
-    // List of all active item instances
-    public static readonly List<Item> Items = new();
+    public static IReadOnlyCollection<Item> All => Items;
+    internal static readonly List<Item> Items = [];
 
-    // Simple grid: position to item
-    public static readonly Dictionary<Vector2I, Item> ItemGrid = new();
+    /// <summary>
+    /// External access to grid. Cannot be used to change the positions. Please set item positions instead.
+    /// </summary>
+    public static IReadOnlyDictionary<Vector2I, Item> Grid => ItemGrid;
+    /// <summary>
+    /// INTERNAL item grid only. DO NOT expose externally.
+    /// </summary>
+    internal static Dictionary<Vector2I, Item> ItemGrid = [];
 
     // List of all known item types
     public static readonly List<Type> AllItemTypes;
@@ -58,13 +64,11 @@ public abstract partial class Item : Node3D
     public override void _EnterTree()
     {
         Items.Add(this);
-        ItemGrid[GridPosition] = this;
     }
 
     public override void _ExitTree()
     {
         Items.Remove(this);
-        ItemGrid.Remove(GridPosition);
     }
 
     public virtual void _ActivateItem()
@@ -86,7 +90,28 @@ public abstract partial class Item : Node3D
 
     public Sin Sin;
 
-    public Vector2I GridPosition;
+
+    private Vector2I _gridPosition;
+    
+    
+    /// <summary>
+    /// The primary entrypoint for setting position on the grid. Also updates the ItemGrid dictionary.
+    /// </summary>
+    public Vector2I GridPosition
+    {
+        get => _gridPosition;
+        set
+        {
+            if (_gridPosition == value) return; // no change, no action
+
+            ItemGrid.Remove(_gridPosition);
+
+            _gridPosition = value;
+
+            // If the key already exists, overwrite it to avoid exception
+            ItemGrid[_gridPosition] = this;
+        }
+    }
 
     public ItemEffect Effect;
 
