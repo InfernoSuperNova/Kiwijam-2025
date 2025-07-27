@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://drpkmrfh0vnxx" path="res://Scripts/Game.cs" id="1_i6g32"]
 [ext_resource type="PackedScene" uid="uid://dtm7jsugmxvtu" path="res://Scenes/ActiveItemSlot.tscn" id="2_1l0tm"]
-[ext_resource type="Script" uid="uid://2ka4jycgsxuy" path="res://Scripts/TopBar.cs" id="3_wrm1d"]
-[ext_resource type="Script" uid="uid://j8sl35arlwio" path="res://Scripts/ShopItem.cs" id="6_1l0tm"]
+[ext_resource type="Script" uid="uid://7e1muyqisvmo" path="res://Scripts/TopBar.cs" id="3_wrm1d"]
+[ext_resource type="Script" uid="uid://b6b1ubnl6qrep" path="res://Scripts/ShopItem.cs" id="6_1l0tm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ebmjs"]
 bg_color = Color(0.249891, 0.284266, 0.418685, 1)
@@ -279,6 +279,5 @@ offset_bottom = 59.0
 text = "Shop"
 
 [connection signal="pressed" from="Control/Activate" to="." method="ActivateButton"]
-[connection signal="pressed" from="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/ShopItem/VBoxContainer/Item" to="." method="BuyItem" binds= ["Sword"]]
 [connection signal="pressed" from="Control/ColorRect/BackButton" to="Control/ColorRect" method="BackButton"]
 [connection signal="pressed" from="Control/ColorRect/ShopButton" to="Control/ColorRect" method="ShopButton"]

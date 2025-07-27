@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://m8lwk1igj2wk"]
+
+[ext_resource type="PackedScene" uid="uid://qpur1vvf5vm1" path="res://Models/PileOfCoins.fbx" id="1_otwjj"]
+
+[node name="PileOfCoins" type="Node3D"]
+
+[node name="PileOfCoins" parent="." instance=ExtResource("1_otwjj")]

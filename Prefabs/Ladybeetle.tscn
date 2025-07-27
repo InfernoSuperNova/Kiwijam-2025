@@ -1,0 +1,19 @@
+[gd_scene load_steps=6 format=3 uid="uid://bdd4q7qxuowc3"]
+
+[ext_resource type="ArrayMesh" uid="uid://csmj5cpt3ypck" path="res://Models/ladybeetle v3 rotated.obj" id="1_bxxox"]
+[ext_resource type="Texture2D" uid="uid://c85osboujhup7" path="res://Textures/ladybeetle-shell_Base-Colour.png" id="2_q6277"]
+[ext_resource type="Texture2D" uid="uid://c4vff30i04an2" path="res://Textures/ladybeetle-body_Base-Colour.png" id="3_xok75"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t5h76"]
+albedo_texture = ExtResource("2_q6277")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gu1kp"]
+albedo_texture = ExtResource("3_xok75")
+
+[node name="Ladybeetle" type="Node3D"]
+
+[node name="Ladybeetle" type="MeshInstance3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+mesh = ExtResource("1_bxxox")
+surface_material_override/0 = SubResource("StandardMaterial3D_t5h76")
+surface_material_override/1 = SubResource("StandardMaterial3D_gu1kp")

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cb5o7wialcskl"]
+
+[ext_resource type="PackedScene" uid="uid://bimnuoo5iy7xw" path="res://Models/BoxingGlove.fbx" id="1_4tip1"]
+
+[node name="BoxingGlove" type="Node3D"]
+
+[node name="BoxingGlove" parent="." instance=ExtResource("1_4tip1")]

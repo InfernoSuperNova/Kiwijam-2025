@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cbym8txl705x4"]
+
+[ext_resource type="PackedScene" uid="uid://cko04epc5dcb8" path="res://Models/Pan.fbx" id="1_hmjur"]
+
+[node name="Pan" type="Node3D"]
+
+[node name="Pan" parent="." instance=ExtResource("1_hmjur")]
