@@ -98,7 +98,6 @@ theme_override_font_sizes/font_size = 18
 text = "Activate Items!"
 
 [node name="Shop" type="Control" parent="Control"]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -149,11 +148,13 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_ebmjs")
 text = "Sword"
 
 [node name="Label" type="RichTextLabel" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/Sword/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
 text = "Cost: 1"
 
 [node name="Guillotine" type="Control" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer"]
@@ -174,11 +175,13 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_ebmjs")
 text = "Guillotine"
 
 [node name="Label" type="RichTextLabel" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/Guillotine/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
 text = "Cost: 1"
 
 [node name="Pan" type="Control" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer"]
@@ -199,11 +202,13 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_ebmjs")
 text = "Pan"
 
 [node name="Label" type="RichTextLabel" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/Pan/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
 text = "Cost: 1"
 
 [node name="BoxingGlove" type="Control" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer"]
@@ -224,11 +229,40 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_ebmjs")
-text = "Pan"
+text = "BoxingGlove"
 
 [node name="Label" type="RichTextLabel" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/BoxingGlove/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
+text = "Cost: 1"
+
+[node name="Bank" type="Control" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("6_1l0tm")
+name = "Bank"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/Bank"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Item" type="Button" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/Bank/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ebmjs")
+text = "Bank"
+
+[node name="Label" type="RichTextLabel" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/Bank/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
 text = "Cost: 1"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="Control/Shop/ColorRect/VBoxContainer"]
@@ -236,34 +270,172 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 90
 
-[node name="Button" type="Button" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer2"]
+[node name="Book" type="Control" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/normal = SubResource("StyleBoxFlat_ebmjs")
-text = "Sword"
+script = ExtResource("6_1l0tm")
+name = "Book"
 
-[node name="Button2" type="Button" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_styles/normal = SubResource("StyleBoxFlat_ebmjs")
-text = "Sword"
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer2/Book"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Button3" type="Button" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer2"]
+[node name="Item" type="Button" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer2/Book/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_ebmjs")
-text = "Sword"
+text = "Book"
 
-[node name="Button4" type="Button" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer2"]
+[node name="Label" type="RichTextLabel" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer2/Book/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Cost: 1"
+
+[node name="Dam!" type="Control" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
+script = ExtResource("6_1l0tm")
+name = "Dam!"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer2/Dam!"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Item" type="Button" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer2/Dam!/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_ebmjs")
-text = "Sword"
+text = "Dam!"
+
+[node name="Label" type="RichTextLabel" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer2/Dam!/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Cost: 1"
+
+[node name="Doughnuts" type="Control" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("6_1l0tm")
+name = "Doughnuts"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer2/Doughnuts"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Item" type="Button" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer2/Doughnuts/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ebmjs")
+text = "Doughnuts"
+
+[node name="Label" type="RichTextLabel" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer2/Doughnuts/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Cost: 1"
+
+[node name="Fries" type="Control" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("6_1l0tm")
+name = "Fries"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer2/Fries"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Item" type="Button" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer2/Fries/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ebmjs")
+text = "Fries"
+
+[node name="Label" type="RichTextLabel" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer2/Fries/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Cost: 1"
+
+[node name="Graduation hat" type="Control" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("6_1l0tm")
+name = "Graduation hat"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer2/Graduation hat"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Item" type="Button" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer2/Graduation hat/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ebmjs")
+text = "Graduation hat"
+
+[node name="Label" type="RichTextLabel" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer2/Graduation hat/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Cost: 1"
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="Control/Shop/ColorRect/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 90
+
+[node name="Ladybeetle" type="Control" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("6_1l0tm")
+name = "Ladybeetle"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer3/Ladybeetle"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Item" type="Button" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer3/Ladybeetle/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ebmjs")
+text = "Ladybeetle"
+
+[node name="Label" type="RichTextLabel" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer3/Ladybeetle/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Cost: 1"
 
 [node name="Button" type="Button" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer3"]
 layout_mode = 2
@@ -341,5 +513,12 @@ text = "Shop"
 [connection signal="pressed" from="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/Guillotine/VBoxContainer/Item" to="." method="BuyItem" binds= ["Guillotine"]]
 [connection signal="pressed" from="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/Pan/VBoxContainer/Item" to="." method="BuyItem" binds= ["Pan"]]
 [connection signal="pressed" from="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/BoxingGlove/VBoxContainer/Item" to="." method="BuyItem" binds= ["BoxingGlove"]]
+[connection signal="pressed" from="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/Bank/VBoxContainer/Item" to="." method="BuyItem" binds= ["Bank"]]
+[connection signal="pressed" from="Control/Shop/ColorRect/VBoxContainer/HBoxContainer2/Book/VBoxContainer/Item" to="." method="BuyItem" binds= ["Book"]]
+[connection signal="pressed" from="Control/Shop/ColorRect/VBoxContainer/HBoxContainer2/Dam!/VBoxContainer/Item" to="." method="BuyItem" binds= ["Dam!"]]
+[connection signal="pressed" from="Control/Shop/ColorRect/VBoxContainer/HBoxContainer2/Doughnuts/VBoxContainer/Item" to="." method="BuyItem" binds= ["Doughnuts"]]
+[connection signal="pressed" from="Control/Shop/ColorRect/VBoxContainer/HBoxContainer2/Fries/VBoxContainer/Item" to="." method="BuyItem" binds= ["Fries"]]
+[connection signal="pressed" from="Control/Shop/ColorRect/VBoxContainer/HBoxContainer2/Graduation hat/VBoxContainer/Item" to="." method="BuyItem" binds= ["Graduation hat"]]
+[connection signal="pressed" from="Control/Shop/ColorRect/VBoxContainer/HBoxContainer3/Ladybeetle/VBoxContainer/Item" to="." method="BuyItem" binds= ["Graduation hat"]]
 [connection signal="pressed" from="Control/ColorRect/BackButton" to="Control/ColorRect" method="BackButton"]
 [connection signal="pressed" from="Control/ColorRect/ShopButton" to="Control/ColorRect" method="ShopButton"]

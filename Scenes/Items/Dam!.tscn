@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://8kf30sgxqsvn"]
+
+[ext_resource type="Script" uid="uid://mejq5856qkjf" path="res://Scripts/Items/Damn.cs" id="1_tav6r"]
+[ext_resource type="PackedScene" uid="uid://blfli1qsp8cbf" path="res://Models/Dam!.fbx" id="2_wgiit"]
+
+[node name="Dam!" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.157082, 0)
+script = ExtResource("1_tav6r")
+
+[node name="Dam!" parent="." instance=ExtResource("2_wgiit")]

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8rmqm258inlm"]
+
+[ext_resource type="Script" uid="uid://dn14iri02kb7a" path="res://Scripts/Items/Fries.cs" id="1_qrkjd"]
+[ext_resource type="PackedScene" uid="uid://3hewo6bpc5a0" path="res://Models/Fries.fbx" id="2_ennpu"]
+
+[node name="Fries" type="Node3D"]
+script = ExtResource("1_qrkjd")
+
+[node name="Fries" parent="." instance=ExtResource("2_ennpu")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0.665925, 0)

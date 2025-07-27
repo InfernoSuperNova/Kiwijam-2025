@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmsl0wvrxfixq"]
+
+[ext_resource type="Script" uid="uid://b7ox5aqh57070" path="res://Scripts/Items/Doughnuts.cs" id="1_b2dhc"]
+[ext_resource type="PackedScene" uid="uid://ctdd4bsmir7or" path="res://Models/Doughnuts.fbx" id="2_j5e70"]
+
+[node name="Doughnuts" type="Node3D"]
+script = ExtResource("1_b2dhc")
+
+[node name="Doughnuts" parent="." instance=ExtResource("2_j5e70")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.293334, 0)

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dm5au47x1748g"]
+
+[ext_resource type="Script" uid="uid://cp1hcdrv4hwbw" path="res://Scripts/Items/Bank.cs" id="1_rwa0b"]
+[ext_resource type="PackedScene" uid="uid://cg6l7i783hiid" path="res://Models/Bank.fbx" id="2_vmryl"]
+
+[node name="Bank" type="Node3D"]
+script = ExtResource("1_rwa0b")
+
+[node name="Bank" parent="." instance=ExtResource("2_vmryl")]
+transform = Transform3D(-2.18557e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.18557e-08, 0, 0.134607, 0.179431)
