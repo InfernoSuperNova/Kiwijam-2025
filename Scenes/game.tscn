@@ -98,6 +98,7 @@ theme_override_font_sizes/font_size = 18
 text = "Activate Items!"
 
 [node name="Shop" type="Control" parent="Control"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -161,6 +162,7 @@ text = "Cost: 1"
 layout_mode = 2
 size_flags_horizontal = 3
 script = ExtResource("6_1l0tm")
+cost = 2
 name = "Guillotine"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/Guillotine"]
@@ -188,6 +190,7 @@ text = "Cost: 1"
 layout_mode = 2
 size_flags_horizontal = 3
 script = ExtResource("6_1l0tm")
+cost = 3
 name = "Pan"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/Pan"]
@@ -215,6 +218,7 @@ text = "Cost: 1"
 layout_mode = 2
 size_flags_horizontal = 3
 script = ExtResource("6_1l0tm")
+cost = 3
 name = "BoxingGlove"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/BoxingGlove"]
@@ -242,6 +246,7 @@ text = "Cost: 1"
 layout_mode = 2
 size_flags_horizontal = 3
 script = ExtResource("6_1l0tm")
+cost = 50
 name = "Bank"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/Bank"]
@@ -274,6 +279,7 @@ theme_override_constants/separation = 90
 layout_mode = 2
 size_flags_horizontal = 3
 script = ExtResource("6_1l0tm")
+cost = 5
 name = "Book"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer2/Book"]
@@ -301,6 +307,7 @@ text = "Cost: 1"
 layout_mode = 2
 size_flags_horizontal = 3
 script = ExtResource("6_1l0tm")
+cost = 6
 name = "Dam!"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer2/Dam!"]
@@ -328,6 +335,7 @@ text = "Cost: 1"
 layout_mode = 2
 size_flags_horizontal = 3
 script = ExtResource("6_1l0tm")
+cost = 7
 name = "Doughnuts"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer2/Doughnuts"]
@@ -355,6 +363,7 @@ text = "Cost: 1"
 layout_mode = 2
 size_flags_horizontal = 3
 script = ExtResource("6_1l0tm")
+cost = 8
 name = "Fries"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer2/Fries"]
@@ -382,6 +391,7 @@ text = "Cost: 1"
 layout_mode = 2
 size_flags_horizontal = 3
 script = ExtResource("6_1l0tm")
+cost = 8
 name = "Graduation hat"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer2/Graduation hat"]
@@ -414,6 +424,7 @@ theme_override_constants/separation = 90
 layout_mode = 2
 size_flags_horizontal = 3
 script = ExtResource("6_1l0tm")
+cost = 9
 name = "Ladybeetle"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer3/Ladybeetle"]
@@ -441,6 +452,7 @@ text = "Cost: 1"
 layout_mode = 2
 size_flags_horizontal = 3
 script = ExtResource("6_1l0tm")
+cost = 10
 name = "Medal"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer3/Medal"]
@@ -468,6 +480,7 @@ text = "Cost: 1"
 layout_mode = 2
 size_flags_horizontal = 3
 script = ExtResource("6_1l0tm")
+cost = 11
 name = "PileOfCoins"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer3/PileOfCoins"]
@@ -495,6 +508,7 @@ text = "Cost: 1"
 layout_mode = 2
 size_flags_horizontal = 3
 script = ExtResource("6_1l0tm")
+cost = 12
 name = "Potion"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer3/Potion"]

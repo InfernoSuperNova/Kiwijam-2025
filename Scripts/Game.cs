@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Xml.Linq;
 using Kiwijam2025.Scripts.Items;
+using Kiwijam2025;
 
 public partial class Game : Node3D
 {
@@ -13,7 +14,6 @@ public partial class Game : Node3D
     RichTextLabel activationText;
     long activations = 100;
     RichTextLabel pointsText;
-    long points = 10;
     PackedScene boughtItem = null;
     Dictionary<string, PackedScene> fileToPackedScene = new Dictionary<string, PackedScene>();
     
@@ -25,7 +25,7 @@ public partial class Game : Node3D
         activationText = GetNode<RichTextLabel>("Control/ColorRect/Activations");
         activationText.Text = "Activations Left: " + activations;
         pointsText = GetNode<RichTextLabel>("Control/ColorRect/Points");
-        pointsText.Text = "Points: " + points;
+        pointsText.Text = "Points: " + PlayerWallet.Points;
         foreach (Node node in activeItemSlots.GetChildren())
         {
             if(node is StaticBody3D itemSlot)
@@ -47,8 +47,17 @@ public partial class Game : Node3D
 
     public void BuyItem(string itemName)
     {
+        ShopItem shopItem = GetNode<ShopItem>("Control/Shop/ColorRect/VBoxContainer/HBoxContainer/" + itemName);
+        if (shopItem.cost > PlayerWallet.Points)
+        {
+            return;
+        }
+        PlayerWallet.Points -= shopItem.cost;
+        
         boughtItem = fileToPackedScene[itemName];
         Control shop = GetNode<Control>("Control/Shop");
+        
+        pointsText.Text = "Points: " + PlayerWallet.Points;
         shop.Hide();
         Button backButton = GetNode<Button>("Control/ColorRect/BackButton");
         backButton.Hide();
@@ -64,10 +73,10 @@ public partial class Game : Node3D
         activationText.Text = "Activations Left: " + activations;
 
         foreach (Item item in Item.All) {
-            points += (long)item.PointGen;
+            PlayerWallet.Points += (long)item.PointGen;
         }
         
-        pointsText.Text = "Points: " + points;
+        pointsText.Text = "Points: " + PlayerWallet.Points;
     }
 
     public override void _Input(InputEvent @event)
