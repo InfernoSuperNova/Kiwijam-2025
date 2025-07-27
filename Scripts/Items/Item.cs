@@ -44,7 +44,7 @@ public abstract partial class Item : Node3D
     /// <summary>
     /// INTERNAL item grid only. DO NOT expose externally.
     /// </summary>
-    internal static Dictionary<Vector2I, Item> ItemGrid = [];
+    internal static readonly Dictionary<Vector2I, Item> ItemGrid = [];
 
     // List of all known item types
     public static readonly List<Type> AllItemTypes;
@@ -132,6 +132,12 @@ public abstract partial class Item : Node3D
     {
         ItemGrid.TryGetValue(GridPosition + offset, out var item);
         return item;
+    }
+
+    public Item? GetRelative(int x, int y)
+    {
+        var offset = new Vector2I(x, y);
+        return GetRelative(offset);
     }
     #endregion
     #endregion
