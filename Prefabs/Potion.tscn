@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://x7mlfoqy03df"]
+
+[ext_resource type="PackedScene" uid="uid://lwjmqrjwgl2y" path="res://Models/potion.fbx" id="1_o1wos"]
+
+[node name="Potion" type="Node3D"]
+
+[node name="Potion" parent="." instance=ExtResource("1_o1wos")]

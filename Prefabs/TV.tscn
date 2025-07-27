@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0ul0442l1ak6"]
+
+[ext_resource type="PackedScene" uid="uid://bbuibvk1tmlu3" path="res://Models/TV.fbx" id="1_o0nsk"]
+
+[node name="TV" type="Node3D"]
+
+[node name="TV" parent="." instance=ExtResource("1_o0nsk")]

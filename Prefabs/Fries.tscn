@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3mnctpnbdjyr"]
+
+[ext_resource type="PackedScene" uid="uid://do4ccq1pmaiar" path="res://Models/Fries.fbx" id="1_knu3l"]
+
+[node name="Fries" type="Node3D"]
+
+[node name="Fries" parent="." instance=ExtResource("1_knu3l")]

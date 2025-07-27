@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://blry0x8bl7wlb"]
+
+[ext_resource type="PackedScene" uid="uid://ckjwxgpi1l2t2" path="res://Models/Medal.fbx" id="1_7wk2q"]
+
+[node name="Medal" type="Node3D"]
+
+[node name="Medal" parent="." instance=ExtResource("1_7wk2q")]

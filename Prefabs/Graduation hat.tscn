@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://did4cbhpe6hhk"]
+
+[ext_resource type="PackedScene" uid="uid://u5ox2xffrx4u" path="res://Models/Graduation hat.fbx" id="1_1i0m4"]
+
+[node name="Graduation hat" type="Node3D"]
+
+[node name="Graduation hat" parent="." instance=ExtResource("1_1i0m4")]

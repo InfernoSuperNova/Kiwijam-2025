@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8pu1kn7c6whx"]
+
+[ext_resource type="PackedScene" uid="uid://bkm5w6a06e2hh" path="res://Models/Bank.fbx" id="1_ep043"]
+
+[node name="Bank" type="Node3D"]
+
+[node name="Bank" parent="." instance=ExtResource("1_ep043")]

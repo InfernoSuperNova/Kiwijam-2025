@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://josrc6fc2xeb"]
+
+[ext_resource type="PackedScene" uid="uid://ds51p2epbm6ew" path="res://Models/Collapsed bank.fbx" id="1_ah258"]
+
+[node name="Collapsed bank" type="Node3D"]
+
+[node name="Collapsed bank" parent="." instance=ExtResource("1_ah258")]

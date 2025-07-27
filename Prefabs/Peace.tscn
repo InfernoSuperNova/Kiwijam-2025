@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://0nblh8t5a0h2"]
+
+[ext_resource type="PackedScene" uid="uid://dd3jv1p10sf1d" path="res://Models/Peace.fbx" id="1_dojtu"]
+
+[node name="Peace" type="Node3D"]
+
+[node name="Peace" parent="." instance=ExtResource("1_dojtu")]

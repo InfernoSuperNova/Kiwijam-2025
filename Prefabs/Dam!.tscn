@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://0rfay8c7b0qs"]
+
+[ext_resource type="PackedScene" uid="uid://d04eil4wx2xu" path="res://Models/Dam!.fbx" id="1_cput3"]
+
+[node name="Dam!" type="Node3D"]
+
+[node name="Dam!" parent="." instance=ExtResource("1_cput3")]
