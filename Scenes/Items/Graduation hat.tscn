@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cs5oagqjj13ex"]
+
+[ext_resource type="Script" uid="uid://dfm7dj685sfun" path="res://Scripts/Items/GraduationHat.cs" id="1_sohlm"]
+[ext_resource type="PackedScene" uid="uid://cm1fpapwetu1r" path="res://Models/Graduation hat.fbx" id="2_hkp6h"]
+
+[node name="Graduation hat" type="Node3D"]
+script = ExtResource("1_sohlm")
+
+[node name="Graduation hat" parent="." instance=ExtResource("2_hkp6h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.294115, 0)

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3vw061hrmk8v"]
+
+[ext_resource type="Script" uid="uid://b24wbllh7gj1u" path="res://Scripts/Items/Book.cs" id="1_yanv0"]
+[ext_resource type="PackedScene" uid="uid://bf1i1h4sh8d32" path="res://Models/Book.fbx" id="2_8uiyi"]
+
+[node name="Book" type="Node3D"]
+script = ExtResource("1_yanv0")
+
+[node name="Book" parent="." instance=ExtResource("2_8uiyi")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0.307775, 0)
