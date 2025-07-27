@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://drpkmrfh0vnxx" path="res://Scripts/Game.cs" id="1_i6g32"]
 [ext_resource type="PackedScene" uid="uid://dtm7jsugmxvtu" path="res://Scenes/ActiveItemSlot.tscn" id="2_1l0tm"]
-[ext_resource type="Script" uid="uid://2ka4jycgsxuy" path="res://Scripts/TopBar.cs" id="3_wrm1d"]
-[ext_resource type="Script" uid="uid://j8sl35arlwio" path="res://Scripts/ShopItem.cs" id="6_1l0tm"]
+[ext_resource type="Script" uid="uid://cbk8k6ge2sn4o" path="res://Scripts/TopBar.cs" id="3_wrm1d"]
+[ext_resource type="Script" uid="uid://mad52otij1gr" path="res://Scripts/ShopItem.cs" id="6_1l0tm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ebmjs"]
 bg_color = Color(0.249891, 0.284266, 0.418685, 1)

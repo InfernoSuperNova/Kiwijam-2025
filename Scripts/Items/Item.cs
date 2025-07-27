@@ -18,17 +18,27 @@ public enum Sin
     Sloth
 }
 
-public struct PointGen()
+public struct PointGen
 {
-    public double Base = 0;
-    public double AddPreMul = 0;
-    public double Mul = 1;
-    public double AddPostMul = 0;
+    public double Base;
+    public double AddPreMul;
+    public double Mul;
+    public double AddPostMul;
+
+    // Explicit parameterless constructor
+    public PointGen()
+    {
+        Base = 0;
+        AddPreMul = 0;
+        Mul = 1;
+        AddPostMul = 0;
+    }
 
     public double Value => (Base + AddPreMul) * Mul + AddPostMul;
     public static implicit operator double(PointGen p) => p.Value;
     public static explicit operator long(PointGen p) => (long)p.Value;
 }
+
 
 #region ItemBase
 public abstract partial class Item : Node3D
@@ -138,6 +148,11 @@ public abstract partial class Item : Node3D
     {
         var offset = new Vector2I(x, y);
         return GetRelative(offset);
+    }
+
+    public Item()
+    {
+        PointGen.Mul = 1;
     }
     #endregion
     #endregion
