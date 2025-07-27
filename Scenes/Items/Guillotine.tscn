@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnap3eaqjybga"]
+
+[ext_resource type="Script" uid="uid://dhvu8gf1rmgdn" path="res://Scripts/Items/Guillotine.cs" id="1_s80nx"]
+[ext_resource type="PackedScene" uid="uid://dn6l0xuq7qwh3" path="res://Models/Guillotine.fbx" id="2_mkefi"]
+
+[node name="Guillotine" type="Node3D"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+script = ExtResource("1_s80nx")
+
+[node name="Guillotine" parent="." instance=ExtResource("2_mkefi")]

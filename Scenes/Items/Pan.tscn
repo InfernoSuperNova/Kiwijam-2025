@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://clwrl3cv53ayw"]
+
+[ext_resource type="Script" uid="uid://cwgfx3oi84d7r" path="res://Scripts/Items/Pan.cs" id="1_wdlda"]
+[ext_resource type="PackedScene" uid="uid://cko04epc5dcb8" path="res://Models/Pan.fbx" id="2_a2hn1"]
+
+[node name="Pan" type="Node3D"]
+transform = Transform3D(-0.8, 0, -1.20797e-07, 0, 0.8, 0, 1.20797e-07, 0, -0.8, 0, 0, 0)
+script = ExtResource("1_wdlda")
+
+[node name="Pan" parent="." instance=ExtResource("2_a2hn1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.243795, 0)

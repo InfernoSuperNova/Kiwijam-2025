@@ -35,7 +35,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 1.5)
 [node name="Item_Slot_1_0" parent="ItemSlots/Active" instance=ExtResource("2_1l0tm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0.5)
 
-[node name="Item_Slot1_1" parent="ItemSlots/Active" instance=ExtResource("2_1l0tm")]
+[node name="Item_Slot_1_1" parent="ItemSlots/Active" instance=ExtResource("2_1l0tm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0.5)
 
 [node name="Item_Slot_1_2" parent="ItemSlots/Active" instance=ExtResource("2_1l0tm")]
@@ -131,12 +131,13 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 90
 
-[node name="ShopItem" type="Control" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer"]
+[node name="Sword" type="Control" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 script = ExtResource("6_1l0tm")
+name = "Sword"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/ShopItem"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/Sword"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -144,34 +145,91 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Item" type="Button" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/ShopItem/VBoxContainer"]
+[node name="Item" type="Button" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/Sword/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/normal = SubResource("StyleBoxFlat_ebmjs")
 text = "Sword"
 
-[node name="Label" type="RichTextLabel" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/ShopItem/VBoxContainer"]
+[node name="Label" type="RichTextLabel" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/Sword/VBoxContainer"]
 layout_mode = 2
 text = "Cost: 1"
 
-[node name="Button2" type="Button" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer"]
+[node name="Guillotine" type="Control" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/normal = SubResource("StyleBoxFlat_ebmjs")
-text = "Sword"
+script = ExtResource("6_1l0tm")
+name = "Guillotine"
 
-[node name="Button3" type="Button" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_styles/normal = SubResource("StyleBoxFlat_ebmjs")
-text = "Sword"
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/Guillotine"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Button4" type="Button" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer"]
+[node name="Item" type="Button" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/Guillotine/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_vertical = 3
 theme_override_styles/normal = SubResource("StyleBoxFlat_ebmjs")
-text = "Sword"
+text = "Guillotine"
+
+[node name="Label" type="RichTextLabel" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/Guillotine/VBoxContainer"]
+layout_mode = 2
+text = "Cost: 1"
+
+[node name="Pan" type="Control" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("6_1l0tm")
+name = "Pan"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/Pan"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Item" type="Button" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/Pan/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_ebmjs")
+text = "Pan"
+
+[node name="Label" type="RichTextLabel" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/Pan/VBoxContainer"]
+layout_mode = 2
+text = "Cost: 1"
+
+[node name="BoxingGlove" type="Control" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("6_1l0tm")
+name = "BoxingGlove"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/BoxingGlove"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Item" type="Button" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/BoxingGlove/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_ebmjs")
+text = "Pan"
+
+[node name="Label" type="RichTextLabel" parent="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/BoxingGlove/VBoxContainer"]
+layout_mode = 2
+text = "Cost: 1"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="Control/Shop/ColorRect/VBoxContainer"]
 layout_mode = 2
@@ -279,6 +337,9 @@ offset_bottom = 59.0
 text = "Shop"
 
 [connection signal="pressed" from="Control/Activate" to="." method="ActivateButton"]
-[connection signal="pressed" from="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/ShopItem/VBoxContainer/Item" to="." method="BuyItem" binds= ["Sword"]]
+[connection signal="pressed" from="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/Sword/VBoxContainer/Item" to="." method="BuyItem" binds= ["Sword"]]
+[connection signal="pressed" from="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/Guillotine/VBoxContainer/Item" to="." method="BuyItem" binds= ["Guillotine"]]
+[connection signal="pressed" from="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/Pan/VBoxContainer/Item" to="." method="BuyItem" binds= ["Pan"]]
+[connection signal="pressed" from="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/BoxingGlove/VBoxContainer/Item" to="." method="BuyItem" binds= ["BoxingGlove"]]
 [connection signal="pressed" from="Control/ColorRect/BackButton" to="Control/ColorRect" method="BackButton"]
 [connection signal="pressed" from="Control/ColorRect/ShopButton" to="Control/ColorRect" method="ShopButton"]
