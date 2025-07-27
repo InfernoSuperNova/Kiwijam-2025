@@ -16,10 +16,28 @@ public partial class Game : Node3D
     RichTextLabel pointsText;
     PackedScene boughtItem = null;
     Dictionary<string, PackedScene> fileToPackedScene = new Dictionary<string, PackedScene>();
+    Dictionary<string, string> shopItemToPath = [];
     
 
     public override void _Ready()
     {
+        shopItemToPath.Add("Sword", "Control/Shop/ColorRect/VBoxContainer/HBoxContainer/");
+        shopItemToPath.Add("Pan", "Control/Shop/ColorRect/VBoxContainer/HBoxContainer/");
+        shopItemToPath.Add("BoxingGlove", "Control/Shop/ColorRect/VBoxContainer/HBoxContainer/");
+        shopItemToPath.Add("Bank", "Control/Shop/ColorRect/VBoxContainer/HBoxContainer/");
+        shopItemToPath.Add("Guillotine", "Control/Shop/ColorRect/VBoxContainer/HBoxContainer/");
+
+        shopItemToPath.Add("Book", "Control/Shop/ColorRect/VBoxContainer/HBoxContainer2/");
+        shopItemToPath.Add("Dam!", "Control/Shop/ColorRect/VBoxContainer/HBoxContainer2/");
+        shopItemToPath.Add("Doughnuts", "Control/Shop/ColorRect/VBoxContainer/HBoxContainer2/");
+        shopItemToPath.Add("Fries", "Control/Shop/ColorRect/VBoxContainer/HBoxContainer2/");
+        shopItemToPath.Add("Graduation had", "Control/Shop/ColorRect/VBoxContainer/HBoxContainer2/");
+
+        shopItemToPath.Add("Ladybeetle", "Control/Shop/ColorRect/VBoxContainer/HBoxContainer3/");
+        shopItemToPath.Add("Medal", "Control/Shop/ColorRect/VBoxContainer/HBoxContainer3/");
+        shopItemToPath.Add("PileOfCoins", "Control/Shop/ColorRect/VBoxContainer/HBoxContainer3/");
+        shopItemToPath.Add("Potion", "Control/Shop/ColorRect/VBoxContainer/HBoxContainer3/");
+        shopItemToPath.Add("TV", "Control/Shop/ColorRect/VBoxContainer/HBoxContainer3/");
         base._Ready();
         Node3D activeItemSlots = GetNode<Node3D>("ItemSlots/Active");
         activationText = GetNode<RichTextLabel>("Control/ColorRect/Activations");
@@ -47,7 +65,7 @@ public partial class Game : Node3D
 
     public void BuyItem(string itemName)
     {
-        ShopItem shopItem = GetNode<ShopItem>("Control/Shop/ColorRect/VBoxContainer/HBoxContainer/" + itemName);
+        ShopItem shopItem = GetNode<ShopItem>(shopItemToPath[itemName] + itemName);
         if (shopItem.cost > PlayerWallet.Points)
         {
             return;
