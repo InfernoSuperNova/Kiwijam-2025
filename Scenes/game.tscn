@@ -1,11 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://bvhvdbpedau06"]
+[gd_scene load_steps=6 format=3 uid="uid://bvhvdbpedau06"]
 
 [ext_resource type="Script" uid="uid://drpkmrfh0vnxx" path="res://Scripts/Game.cs" id="1_i6g32"]
 [ext_resource type="PackedScene" uid="uid://dtm7jsugmxvtu" path="res://Scenes/ActiveItemSlot.tscn" id="2_1l0tm"]
-[ext_resource type="PackedScene" uid="uid://jqln0sad2ada" path="res://Models/Item_Slot_Dark.fbx" id="2_3dryh"]
-[ext_resource type="PackedScene" uid="uid://cn7dk47nau5g4" path="res://Models/Item_Slot.fbx" id="2_qxrlw"]
-[ext_resource type="Script" uid="uid://c3cvulfbk4o4a" path="res://Scripts/TopBar.cs" id="3_wrm1d"]
-[ext_resource type="Script" uid="uid://t7444k6rm4fc" path="res://Scripts/ShopItem.cs" id="6_1l0tm"]
+[ext_resource type="Script" uid="uid://2ka4jycgsxuy" path="res://Scripts/TopBar.cs" id="3_wrm1d"]
+[ext_resource type="Script" uid="uid://j8sl35arlwio" path="res://Scripts/ShopItem.cs" id="6_1l0tm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ebmjs"]
 bg_color = Color(0.249891, 0.284266, 0.418685, 1)
@@ -14,65 +12,61 @@ bg_color = Color(0.249891, 0.284266, 0.418685, 1)
 script = ExtResource("1_i6g32")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.374607, 0.927184, 0, -0.927184, 0.374607, 0, 3.018, 1.60378)
+transform = Transform3D(1, 0, 0, 0, 0.374607, 0.927184, 0, -0.927184, 0.374607, 0, 5, 2)
 current = true
 
 [node name="ItemSlots" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -0.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
 
 [node name="Active" type="Node3D" parent="ItemSlots"]
 
-[node name="Item_Slot" parent="ItemSlots/Active" instance=ExtResource("2_1l0tm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0.5)
-
-[node name="Item_Slot2" parent="ItemSlots/Active" instance=ExtResource("2_1l0tm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0.5)
-
-[node name="Item_Slot3" parent="ItemSlots/Active" instance=ExtResource("2_1l0tm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -0.5)
-
-[node name="Item_Slot4" parent="ItemSlots/Active" instance=ExtResource("2_1l0tm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, -0.5)
-
-[node name="Item_Slot5" parent="ItemSlots/Active" instance=ExtResource("2_1l0tm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5045, 0, -0.5)
-
-[node name="Item_Slot6" parent="ItemSlots/Active" instance=ExtResource("2_qxrlw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 0.5)
-
-[node name="Item_Slot7" parent="ItemSlots/Active" instance=ExtResource("2_qxrlw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 1.5)
-
-[node name="Item_Slot8" parent="ItemSlots/Active" instance=ExtResource("2_qxrlw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 1.5)
-
-[node name="Item_Slot9" parent="ItemSlots/Active" instance=ExtResource("2_qxrlw")]
+[node name="Item_Slot_0_0" parent="ItemSlots/Active" instance=ExtResource("2_1l0tm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 1.5)
 
-[node name="Inactive" type="Node3D" parent="ItemSlots"]
+[node name="Item_Slot_0_1" parent="ItemSlots/Active" instance=ExtResource("2_1l0tm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 1.5)
 
-[node name="Item_Slot_Dark" parent="ItemSlots/Inactive" instance=ExtResource("2_3dryh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 0.5)
+[node name="Item_Slot_0_2" parent="ItemSlots/Active" instance=ExtResource("2_1l0tm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 1.5)
 
-[node name="Item_Slot_Dark2" parent="ItemSlots/Inactive" instance=ExtResource("2_3dryh")]
+[node name="Item_Slot_0_3" parent="ItemSlots/Active" instance=ExtResource("2_1l0tm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 1.5)
 
-[node name="Item_Slot_Dark3" parent="ItemSlots/Inactive" instance=ExtResource("2_3dryh")]
+[node name="Item_Slot_1_0" parent="ItemSlots/Active" instance=ExtResource("2_1l0tm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0.5)
+
+[node name="Item_Slot1_1" parent="ItemSlots/Active" instance=ExtResource("2_1l0tm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0.5)
+
+[node name="Item_Slot_1_2" parent="ItemSlots/Active" instance=ExtResource("2_1l0tm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.505, 0, 0.5)
+
+[node name="Item_Slot_1_3" parent="ItemSlots/Active" instance=ExtResource("2_1l0tm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 0.5)
+
+[node name="Item_Slot_2_0" parent="ItemSlots/Active" instance=ExtResource("2_1l0tm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -0.5)
+
+[node name="Item_Slot_2_1" parent="ItemSlots/Active" instance=ExtResource("2_1l0tm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, -0.5)
+
+[node name="Item_Slot_2_2" parent="ItemSlots/Active" instance=ExtResource("2_1l0tm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5045, 0, -0.5)
+
+[node name="Item_Slot_2_3" parent="ItemSlots/Active" instance=ExtResource("2_1l0tm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, -0.5)
 
-[node name="Item_Slot_Dark4" parent="ItemSlots/Inactive" instance=ExtResource("2_3dryh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, -1.5)
-
-[node name="Item_Slot_Dark5" parent="ItemSlots/Inactive" instance=ExtResource("2_3dryh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -1.5)
-
-[node name="Item_Slot_Dark6" parent="ItemSlots/Inactive" instance=ExtResource("2_3dryh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, -1.5)
-
-[node name="Item_Slot_Dark7" parent="ItemSlots/Inactive" instance=ExtResource("2_3dryh")]
+[node name="Item_Slot_3_0" parent="ItemSlots/Active" instance=ExtResource("2_1l0tm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -1.5)
 
-[node name="Items" type="Node3D" parent="."]
+[node name="Item_Slot_3_1" parent="ItemSlots/Active" instance=ExtResource("2_1l0tm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, -1.5)
+
+[node name="Item_Slot_3_2" parent="ItemSlots/Active" instance=ExtResource("2_1l0tm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -1.5)
+
+[node name="Item_Slot_3_3" parent="ItemSlots/Active" instance=ExtResource("2_1l0tm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, -1.5)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.691954, 0.580248, -0.429549, 2.40989e-08, 0.594991, 0.803732, 0.721941, -0.556146, 0.411707, -2.45524, 2.02305, 0.754217)
@@ -285,5 +279,6 @@ offset_bottom = 59.0
 text = "Shop"
 
 [connection signal="pressed" from="Control/Activate" to="." method="ActivateButton"]
+[connection signal="pressed" from="Control/Shop/ColorRect/VBoxContainer/HBoxContainer/ShopItem/VBoxContainer/Item" to="." method="BuyItem" binds= ["Sword"]]
 [connection signal="pressed" from="Control/ColorRect/BackButton" to="Control/ColorRect" method="BackButton"]
 [connection signal="pressed" from="Control/ColorRect/ShopButton" to="Control/ColorRect" method="ShopButton"]

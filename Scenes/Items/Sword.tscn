@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c63olno6a4wye"]
 
-[ext_resource type="Script" uid="uid://p7yisdplni4i" path="res://Scripts/Items/Sword.cs" id="1_8kelq"]
+[ext_resource type="Script" uid="uid://brwqfu4uuua06" path="res://Scripts/Items/Sword.cs" id="1_8kelq"]
 [ext_resource type="PackedScene" uid="uid://soxqd06t14dd" path="res://Models/Sword.fbx" id="2_8kelq"]
 
 [node name="Sword" type="Node3D"]
