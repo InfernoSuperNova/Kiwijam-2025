@@ -11,10 +11,12 @@ public partial class Sword : Item
         Sin = Sin.Wrath;
         Effect = new SwordEffect();
         //TODO: Fill these out
-        PointGen.Base = 0;
-        
+        PointGen.Base = 1;
+        PointGen.Mul = 1;
+
     }
 }
+
 
 public partial class SwordEffect : ItemEffect
 {

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmksmmt7kkxw5"]
+
+[ext_resource type="Script" uid="uid://bnlsid5m2xcgb" path="res://Scripts/Items/BoxingGlove.cs" id="1_bkhne"]
+[ext_resource type="PackedScene" uid="uid://bimnuoo5iy7xw" path="res://Models/BoxingGlove.fbx" id="2_bkhne"]
+
+[node name="BoxingGlove" type="Node3D"]
+script = ExtResource("1_bkhne")
+
+[node name="BoxingGlove" parent="." instance=ExtResource("2_bkhne")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.249814, 0)
