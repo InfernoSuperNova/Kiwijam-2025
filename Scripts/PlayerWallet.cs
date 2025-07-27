@@ -2,10 +2,10 @@ namespace Kiwijam2025;
 
 public class PlayerWallet
 {
-    public static float Points = 0;
+    public static long Points = 5;
 
     public static void ResetPoints()
     {
-        Points = 0;
+        Points = 5;
     }
 }

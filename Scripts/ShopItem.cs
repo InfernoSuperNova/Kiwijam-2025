@@ -4,7 +4,7 @@ using System;
 public partial class ShopItem : Control
 {
     [Export]
-    long cost = 1;
+    public long cost = 1;
     [Export]
     string name = "sword";
     RichTextLabel label;
