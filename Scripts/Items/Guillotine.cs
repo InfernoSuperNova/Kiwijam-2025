@@ -7,8 +7,8 @@ public partial class Guillotine : Item
         // set the sin, effect, and point bases
         Sin = Sin.Wrath;
         Effect = new GuillotineEffect(); // We have this as a field so that effects can be swapped out at runtime
-        PointGen.Base = 0;
-        
+        PointGen.Base = 1;
+        PointGen.Mul = 1;
     }
 }
 
