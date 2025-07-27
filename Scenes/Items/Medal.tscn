@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cijo4wxesifyk"]
+
+[ext_resource type="Script" uid="uid://gkhfkiwf75gq" path="res://Scripts/Items/Medal.cs" id="1_rou12"]
+[ext_resource type="PackedScene" uid="uid://0no5206vwadw" path="res://Models/Medal.fbx" id="2_ce7hx"]
+
+[node name="Medal" type="Node3D"]
+script = ExtResource("1_rou12")
+
+[node name="Medal" parent="." instance=ExtResource("2_ce7hx")]
+transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, 0, 0.364008, 0)
