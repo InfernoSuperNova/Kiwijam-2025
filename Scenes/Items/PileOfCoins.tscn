@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwxfflyw37rdu"]
+
+[ext_resource type="Script" uid="uid://7amr86qhjqh7" path="res://Scripts/Items/PileOfCoins.cs" id="1_ips31"]
+[ext_resource type="PackedScene" uid="uid://qpur1vvf5vm1" path="res://Models/PileOfCoins.fbx" id="2_vbnty"]
+
+[node name="PileOfCoins" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.372699, 0)
+script = ExtResource("1_ips31")
+
+[node name="PileOfCoins" parent="." instance=ExtResource("2_vbnty")]

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://mghb0n77qgjk"]
+
+[ext_resource type="Script" uid="uid://belltkgckbm0n" path="res://Scripts/Items/TV.cs" id="1_supg6"]
+[ext_resource type="PackedScene" uid="uid://bup844rb10du3" path="res://Models/TV.fbx" id="2_kvk62"]
+
+[node name="TV" type="Node3D"]
+script = ExtResource("1_supg6")
+
+[node name="TV" parent="." instance=ExtResource("2_kvk62")]
+transform = Transform3D(-3.49691e-08, 0, -0.8, 0, 0.8, 0, 0.8, 0, -3.49691e-08, 0, 0.590003, 0)
