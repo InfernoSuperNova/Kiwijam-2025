@@ -32,10 +32,13 @@ public partial class SwordEffect : ItemEffect
         {
             case Sin.Pride:
                 GD.Print("Sword effect: Set all points to 20 (placeholder, set player wallet points)");
+                //PlayerWallet.Points = 20;
+                right.PointGen.Base = 20;
                 break;
 
             case Sin.Greed:
                 GD.Print("Sword effect: Give 5 MP (placeholder, set player wallet points)");
+                PlayerWallet.Points += 5;
                 break;
 
             case Sin.Envy:
@@ -49,8 +52,9 @@ public partial class SwordEffect : ItemEffect
                 break;
 
             default:
-                GD.Print($"Sword effect: No special effect for {right.Sin}");
+                GD.Print($"Sword effect: No special effect for {i.Sin}");
                 break;
         } 
+        right.QueueFree();
     }
 }
