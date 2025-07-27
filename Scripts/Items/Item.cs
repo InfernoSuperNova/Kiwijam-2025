@@ -127,7 +127,6 @@ public abstract partial class Item : Node3D
     #endregion
 
     #region methods
-
     // Returns the item relative to this one in grid coordinates, or null if none
     public Item? GetRelative(Vector2I offset)
     {

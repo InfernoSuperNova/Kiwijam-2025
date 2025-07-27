@@ -63,11 +63,8 @@ public partial class Game : Node3D
         activations--;
         activationText.Text = "Activations Left: " + activations;
 
-        foreach(StaticBody3D itemSlot in itemSlots) {
-            if(itemSlot.GetChildren().Count == 5 && itemSlot.GetChild(4) is Item item)
-            {
-                points += item._GeneratePoints();
-            }
+        foreach (Item item in Item.All) {
+            points += (long)item.PointGen;
         }
         
         pointsText.Text = "Points: " + points;
@@ -105,9 +102,10 @@ public partial class Game : Node3D
             StaticBody3D body = (StaticBody3D)result["collider"];
             if (body.GetChildren().Count < 5 && boughtItem != null)
             {
-                Node3D instatiatedItem = boughtItem.Instantiate<Node3D>();
+                Item instatiatedItem = boughtItem.Instantiate<Item>();
+                string[] split_item_slot = selectedSlot.Name.ToString().Split("_");
+                instatiatedItem.GridPosition = new Vector2I(int.Parse(split_item_slot[3]), int.Parse(split_item_slot[2]));
                 selectedSlot.AddChild(instatiatedItem);
-                GD.Print(selectedSlot.GetChildren());
                 boughtItem = null;
                 Control shop = GetNode<Control>("Control/Shop");
                 shop.Show();
