@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://c5n1vdvctxer"]
 
-[ext_resource type="Script" uid="uid://brwqfu4uuua06" path="res://Scripts/Items/Sword.cs" id="1_jci1g"]
+[ext_resource type="Script" uid="uid://56e34f1an4s8" path="res://Scripts/Items/Potion.cs" id="1_jci1g"]
 [ext_resource type="PackedScene" uid="uid://cuablqgdvtis0" path="res://Models/potion.fbx" id="2_jci1g"]
 
-[node name="Sword" type="Node3D"]
+[node name="Sword2" type="Node3D"]
 script = ExtResource("1_jci1g")
 
 [node name="potion" parent="." instance=ExtResource("2_jci1g")]

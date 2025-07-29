@@ -24,7 +24,7 @@ public partial class TVEffect : ItemEffect
             {
                 if (x == 0 && y == 0) continue;
                 var item = I.GetRelative(new Vector2I(x, y));
-                if (item != null) PlayerWallet.Points += 5;
+                if (item != null) I.PointGen.AddPreMul += 5;
             }
         }
     }

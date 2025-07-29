@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bqllxnavs6scx"]
+[gd_scene load_steps=3 format=3 uid="uid://dxh5y544owk1f"]
 
-[ext_resource type="Script" uid="uid://bq7d1lp4hwfxm" path="res://Scripts/Items/CollapsedBank.cs" id="1_xmi6s"]
+[ext_resource type="Script" uid="uid://sibyxrb5g1fh" path="res://Scripts/Items/CollapsedBank.cs" id="1_xmi6s"]
 [ext_resource type="PackedScene" uid="uid://c8fg8uilmprr7" path="res://Models/CollapsedBank.fbx" id="2_kxyyo"]
 
 [node name="CollapsedBank" type="Node3D"]

@@ -17,7 +17,7 @@ public partial class GraduationHatEffect : ItemEffect
 {
     public override void Apply(Item I)
     {
-        var other = I.GetRelative(new Vector2I(0, 1));
+        var other = I.GetRelative(new Vector2I(0, -1));
         if (other != null) other.PointGen.Mul *= 3;
     }
 }

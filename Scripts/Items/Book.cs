@@ -8,7 +8,7 @@ public partial class Book : Item
     {
         Sin = Sin.Sloth;
         Effect = new BookEffect();
-        PointGen.Base = 0;
+        PointGen.Base = 5;
         // TODO: Subtract SP from the player's wallet
         
     }
