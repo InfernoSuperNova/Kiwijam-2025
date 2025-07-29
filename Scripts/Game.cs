@@ -12,9 +12,9 @@ public partial class Game : Node3D
     long activations = 100;
     RichTextLabel pointsText;
     PackedScene boughtItem = null;
-    Dictionary<string, PackedScene> fileToPackedScene = new Dictionary<string, PackedScene>();
+    public Dictionary<string, PackedScene> fileToPackedScene = new Dictionary<string, PackedScene>();
     Dictionary<string, string> shopItemToPath = [];
-    
+    public static Game I;
 
     public override void _Ready()
     {
@@ -58,6 +58,8 @@ public partial class Game : Node3D
             string name = splitFile[0];
             fileToPackedScene[name] = GD.Load<PackedScene>("res://Scenes/Items/" + splitFile.Join("."));
         }
+        GD.Print(fileToPackedScene["Sword"]);
+        I = this;
     }
 
     public void BuyItem(string itemName)

@@ -27,6 +27,7 @@ public partial class BankEffect : ItemEffect
         {
             I.QueueFree();
             // Fuckit should replace with collapsed bank but don't have time
+            var collapsedBank = Game.I.fileToPackedScene[itemName];
         }
         
         CollapseChance += 0.1f;
