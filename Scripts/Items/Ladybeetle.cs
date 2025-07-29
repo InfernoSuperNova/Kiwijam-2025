@@ -3,9 +3,9 @@ using Godot;
 
 namespace Kiwijam2025.Scripts.Items;
 
-public partial class LadyBeetle : Item
+public partial class Ladybeetle : Item
 {
-    public LadyBeetle()
+    public Ladybeetle()
     {
         // set the sin, effect, and point bases
         Sin = Sin.Lust;
