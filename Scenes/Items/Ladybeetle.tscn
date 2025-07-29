@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://d2p8ueh166x7v"]
 
-[ext_resource type="Script" uid="uid://cfaqyysa1dsp6" path="res://Scripts/Items/Ladybeetle.cs" id="1_8r51b"]
+[ext_resource type="Script" uid="uid://dneay810y0sb8" path="res://Scripts/Items/Ladybeetle.cs" id="1_8r51b"]
 [ext_resource type="PackedScene" uid="uid://db06jprd7iyrc" path="res://Models/ladybeetle v3.fbx" id="2_g3bgv"]
 
 [node name="Ladybeetle" type="Node3D"]

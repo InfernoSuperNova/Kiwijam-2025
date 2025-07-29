@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cmsl0wvrxfixq"]
 
-[ext_resource type="Script" uid="uid://b7ox5aqh57070" path="res://Scripts/Items/Doughnuts.cs" id="1_b2dhc"]
+[ext_resource type="Script" uid="uid://bop0w60oy0nek" path="res://Scripts/Items/Doughnuts.cs" id="1_b2dhc"]
 [ext_resource type="PackedScene" uid="uid://ctdd4bsmir7or" path="res://Models/Doughnuts.fbx" id="2_j5e70"]
 
 [node name="Doughnuts" type="Node3D"]

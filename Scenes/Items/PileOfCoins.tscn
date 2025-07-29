@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dwxfflyw37rdu"]
 
-[ext_resource type="Script" uid="uid://7amr86qhjqh7" path="res://Scripts/Items/PileOfCoins.cs" id="1_ips31"]
+[ext_resource type="Script" uid="uid://jruq7scuevf1" path="res://Scripts/Items/PileOfCoins.cs" id="1_ips31"]
 [ext_resource type="PackedScene" uid="uid://qpur1vvf5vm1" path="res://Models/PileOfCoins.fbx" id="2_vbnty"]
 
 [node name="PileOfCoins" type="Node3D"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bmksmmt7kkxw5"]
 
-[ext_resource type="Script" uid="uid://bnlsid5m2xcgb" path="res://Scripts/Items/BoxingGlove.cs" id="1_bkhne"]
+[ext_resource type="Script" uid="uid://opby52umfkdx" path="res://Scripts/Items/BoxingGlove.cs" id="1_bkhne"]
 [ext_resource type="PackedScene" uid="uid://bimnuoo5iy7xw" path="res://Models/BoxingGlove.fbx" id="2_bkhne"]
 
 [node name="BoxingGlove" type="Node3D"]
