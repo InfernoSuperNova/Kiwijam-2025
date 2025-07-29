@@ -28,7 +28,7 @@ public partial class Game : Node3D
         shopItemToPath.Add("Dam!", "Control/Shop/ColorRect/VBoxContainer/HBoxContainer2/");
         shopItemToPath.Add("Doughnuts", "Control/Shop/ColorRect/VBoxContainer/HBoxContainer2/");
         shopItemToPath.Add("Fries", "Control/Shop/ColorRect/VBoxContainer/HBoxContainer2/");
-        shopItemToPath.Add("Graduation had", "Control/Shop/ColorRect/VBoxContainer/HBoxContainer2/");
+        shopItemToPath.Add("Graduation hat", "Control/Shop/ColorRect/VBoxContainer/HBoxContainer2/");
 
         shopItemToPath.Add("Ladybeetle", "Control/Shop/ColorRect/VBoxContainer/HBoxContainer3/");
         shopItemToPath.Add("Medal", "Control/Shop/ColorRect/VBoxContainer/HBoxContainer3/");
