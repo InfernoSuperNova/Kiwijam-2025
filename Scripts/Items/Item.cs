@@ -71,7 +71,14 @@ public abstract partial class Item : Node3D
 
     #region instanced
     #region events
+
     public override void _EnterTree()
+    {
+        CallDeferred(nameof(DeferredAdd));
+        base._EnterTree();
+    }
+
+    private void DeferredAdd()
     {
         Items.Add(this);
     }
@@ -87,6 +94,7 @@ public abstract partial class Item : Node3D
         GD.Print($"{GetType().Name} activated at {GridPosition}");
         Effect.Apply(this);
     }
+    
 
     public virtual long _GeneratePoints()
     {
@@ -163,6 +171,9 @@ public abstract partial class Item : Node3D
         QueueFree();
         // Game.I.
     }
+
+    public bool HasSetup = false;
+    public virtual void Setup() { }
     #endregion
     #endregion
 }
