@@ -1,4 +1,5 @@
 using System;
+using Godot;
 
 namespace Kiwijam2025.Scripts.Items;
 
@@ -28,6 +29,10 @@ public partial class BankEffect : ItemEffect
             I.Destroy();
             
             //var collapsedBank = Game.I.fileToPackedScene[itemName];
+            var bankPrefab = Game.I.fileToPackedScene["CollapsedBank"];
+            var bank = (CollapsedBank)bankPrefab.Instantiate();
+            bank.GridPositionToSet = I.GridPosition;
+            I.GetParent().AddChild(bank);
         }
         
         CollapseChance += 0.1f;
