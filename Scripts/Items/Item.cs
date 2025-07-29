@@ -112,7 +112,7 @@ public abstract partial class Item : Node3D
     public PointGen original;
 
 
-    private Vector2I _gridPosition;
+    private Vector2I _gridPosition = new Vector2I(-1, -1);
     
     
     /// <summary>
@@ -123,6 +123,7 @@ public abstract partial class Item : Node3D
         get => _gridPosition;
         set
         {
+            
             if (_gridPosition == value) return; // no change, no action
 
             ItemGrid.Remove(_gridPosition);

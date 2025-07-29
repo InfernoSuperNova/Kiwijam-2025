@@ -141,6 +141,7 @@ public partial class Game : Node3D
             {
                 Item instatiatedItem = boughtItem.Instantiate<Item>();
                 string[] split_item_slot = selectedSlot.Name.ToString().Split("_");
+                
                 instatiatedItem.GridPosition = new Vector2I(int.Parse(split_item_slot[3]), int.Parse(split_item_slot[2]));
                 selectedSlot.AddChild(instatiatedItem);
                 boughtItem = null;

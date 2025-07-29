@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://b0fekr8jh2vjw"]
-
-[ext_resource type="Script" uid="uid://dq5m8p3maanoq" path="res://TestScript.cs" id="1_mncer"]
-
-[node name="Node" type="Node"]
-script = ExtResource("1_mncer")
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.31588)
