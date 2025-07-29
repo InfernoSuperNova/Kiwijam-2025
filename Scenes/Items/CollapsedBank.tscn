@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bjve8eljhjyg6"]
+[gd_scene load_steps=3 format=3 uid="uid://dxh5y544owk1f"]
 
-[ext_resource type="PackedScene" uid="uid://c8fg8uilmprr7" path="res://Models/Collapsed bank.fbx" id="1_rh7xh"]
+[ext_resource type="Script" uid="uid://sibyxrb5g1fh" path="res://Scripts/Items/CollapsedBank.cs" id="1_xmi6s"]
+[ext_resource type="PackedScene" uid="uid://c8fg8uilmprr7" path="res://Models/CollapsedBank.fbx" id="2_kxyyo"]
 
-[node name="CollapsedBank" type="Node3D"]
+[node name="Bank" type="Node3D"]
+script = ExtResource("1_xmi6s")
 
-[node name="Collapsed bank" parent="." instance=ExtResource("1_rh7xh")]
-transform = Transform3D(-2.18557e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.18557e-08, 0, 0.13, 0.17)
+[node name="Collapsed bank" parent="." instance=ExtResource("2_kxyyo")]
+transform = Transform3D(-3.16033e-08, 0, -0.723, 0, 0.723, 0, 0.723, 0, -3.16033e-08, 0, 0.262767, 0.0187912)
