@@ -100,6 +100,8 @@ public abstract partial class Item : Node3D
 
     public Sin Sin;
 
+    public PointGen original;
+
 
     private Vector2I _gridPosition;
     

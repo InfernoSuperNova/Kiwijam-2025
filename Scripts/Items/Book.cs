@@ -1,3 +1,5 @@
+using Godot;
+
 namespace Kiwijam2025.Scripts.Items;
 
 public partial class Book : Item
@@ -20,6 +22,7 @@ public partial class BookEffect : ItemEffect
         var bottom = i.GetRelative(0, 1);
         var left = i.GetRelative(-1, 0);
         var right = i.GetRelative(1, 0);
+        GD.Print(top, bottom, left, right);
         if (top != null && bottom != null && left != null && right != null)
         {
             top.PointGen.Mul *= 2; 

@@ -44,7 +44,8 @@ public partial class SwordEffect : ItemEffect
             case Sin.Envy:
                 GD.Print("Sword effect: Copy effect of item on the right");
                 Type effectType = right.Effect.GetType();
-                i.Effect = (ItemEffect)Activator.CreateInstance(effectType);
+                ItemEffect effect = (ItemEffect)Activator.CreateInstance(effectType);
+                effect.Apply(i);
                 break;
 
             case Sin.Wrath:

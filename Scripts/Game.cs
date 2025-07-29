@@ -1,8 +1,5 @@
 using Godot;
-using Kiwijam2025.Debug;
-using System;
 using System.Collections.Generic;
-using System.Xml.Linq;
 using Kiwijam2025.Scripts.Items;
 using Kiwijam2025;
 
@@ -10,7 +7,7 @@ public partial class Game : Node3D
 {
     public List<StaticBody3D> itemSlots = [];
     Camera3D camera;
-    StaticBody3D selectedSlot;
+    Node3D selectedSlot;
     RichTextLabel activationText;
     long activations = 100;
     RichTextLabel pointsText;
@@ -56,11 +53,11 @@ public partial class Game : Node3D
         string[] itemFiles = DirAccess.Open("res://Scenes/Items").GetFiles();
         foreach (string file in itemFiles)
         {
-            string name = file.Split(".")[0];
-            GD.Print(name);
-            fileToPackedScene[name] = GD.Load<PackedScene>("res://Scenes/Items/" + file);
+            string[] splitFile = file.Split(".");
+            splitFile = [splitFile[0], splitFile[1]];
+            string name = splitFile[0];
+            fileToPackedScene[name] = GD.Load<PackedScene>("res://Scenes/Items/" + splitFile.Join("."));
         }
-        GD.Print(fileToPackedScene["Sword"]);
     }
 
     public void BuyItem(string itemName)
@@ -90,10 +87,24 @@ public partial class Game : Node3D
         activations--;
         activationText.Text = "Activations Left: " + activations;
 
+        foreach (Item item in Item.All)
+        {
+            item.original = item.PointGen;
+            GD.Print("Item original ", item.original);
+        }
+        foreach (Item item in Item.All)
+        {
+            item.Effect.Apply(item);
+        }
         foreach (Item item in Item.All) {
             PlayerWallet.Points += (long)item.PointGen;
         }
-        
+        foreach (Item item in Item.All)
+        {
+            item.PointGen = item.original;
+            GD.Print("Item original ", item.PointGen);
+        }
+
         pointsText.Text = "Points: " + PlayerWallet.Points;
     }
 
@@ -157,7 +168,7 @@ public partial class Game : Node3D
         Godot.Collections.Dictionary result = GetWorld3D().DirectSpaceState.IntersectRay(parameters);
         if (result.Count > 0)
         {
-            StaticBody3D body = (StaticBody3D)result["collider"];
+            Node3D body = (Node3D)result["collider"];
             if(body.GetChildren().Count < 5 && boughtItem != null)
             {
                 selectedSlot = body;

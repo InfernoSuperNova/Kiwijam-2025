@@ -4,5 +4,7 @@
 .vs
 .idea
 
+Builds/
+
 *.uid
 Export/
