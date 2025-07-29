@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://clwrl3cv53ayw"]
 
-[ext_resource type="Script" uid="uid://cwgfx3oi84d7r" path="res://Scripts/Items/Pan.cs" id="1_wdlda"]
+[ext_resource type="Script" uid="uid://dryufrvud4n3t" path="res://Scripts/Items/Pan.cs" id="1_wdlda"]
 [ext_resource type="PackedScene" uid="uid://cko04epc5dcb8" path="res://Models/Pan.fbx" id="2_a2hn1"]
 
 [node name="Pan" type="Node3D"]

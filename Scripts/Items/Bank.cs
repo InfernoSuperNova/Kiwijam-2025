@@ -18,16 +18,16 @@ public partial class Bank : Item
 public partial class BankEffect : ItemEffect
 {
     private float CollapseChance = 0;
-    private Random rng;
+    private Random rng = new();
     public override void Apply(Item I)
     {
         float roll = rng.NextSingle();
 
         if (roll < CollapseChance)
         {
-            I.QueueFree();
-            // Fuckit should replace with collapsed bank but don't have time
-            var collapsedBank = Game.I.fileToPackedScene[itemName];
+            I.Destroy();
+            
+            //var collapsedBank = Game.I.fileToPackedScene[itemName];
         }
         
         CollapseChance += 0.1f;

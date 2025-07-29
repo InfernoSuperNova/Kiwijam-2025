@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://8kf30sgxqsvn"]
 
-[ext_resource type="Script" uid="uid://mejq5856qkjf" path="res://Scripts/Items/Damn.cs" id="1_tav6r"]
+[ext_resource type="Script" uid="uid://c2lruydd0p6ue" path="res://Scripts/Items/Damn.cs" id="1_tav6r"]
 [ext_resource type="PackedScene" uid="uid://blfli1qsp8cbf" path="res://Models/Dam!.fbx" id="2_wgiit"]
 
 [node name="Dam!" type="Node3D"]
