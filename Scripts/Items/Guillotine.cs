@@ -20,10 +20,10 @@ public partial class GuillotineEffect : ItemEffect
     {
         for (int x = -1; x <= 1; x++)
         {
-            var item = I.GetRelative(new Vector2I(x, 1));
+            var item = I.GetRelative(new Vector2I(x, -1));
             if (item != null)
             {
-                item.QueueFree();
+                item.Destroy();
                 PlayerWallet.Points += 20;
             }
         }

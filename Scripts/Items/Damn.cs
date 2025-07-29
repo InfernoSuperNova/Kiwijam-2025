@@ -24,10 +24,10 @@ public partial class DamnEffect : ItemEffect
                 var item = I.GetRelative(new Vector2I(x, y));
                 if (item != null)
                 {
-                    item.PointGen.Mul *= 1.2;
+                    item.PointGen.Mul *= 1.5;
                 }
             }
         }
-        I.QueueFree();
+        I.Destroy();
     }
 }

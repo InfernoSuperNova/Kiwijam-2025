@@ -27,6 +27,6 @@ public partial class PotionEffect : ItemEffect
                 if (item != null) item.PointGen.Mul *= 3;
             }
         }
-        I.QueueFree();
+        I.Destroy();
     }
 }
