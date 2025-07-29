@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dv43ema3gk483"]
+
+[ext_resource type="Script" uid="uid://bu66lgfdl0j43" path="res://Scripts/Items/Peace.cs" id="1_by2wb"]
+[ext_resource type="PackedScene" uid="uid://cg1d6tmvdhkxf" path="res://Models/Peace.fbx" id="2_n6urs"]
+
+[node name="Sword" type="Node3D"]
+script = ExtResource("1_by2wb")
+
+[node name="Peace" parent="." instance=ExtResource("2_n6urs")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.123925, 0)

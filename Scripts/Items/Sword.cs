@@ -49,13 +49,17 @@ public partial class SwordEffect : ItemEffect
                 break;
 
             case Sin.Wrath:
-                GD.Print("Sword effect: Becomes Peace (placeholder)");
+                GD.Print("Sword effect: Becomes Peace");
+                var peacePrefab = Game.I.fileToPackedScene["Peace"];
+                var peace = (Peace)peacePrefab.Instantiate();
+                peace.GridPositionToSet = right.GridPosition;
+                right.GetParent().AddChild(peace);
                 break;
 
             default:
                 GD.Print($"Sword effect: No special effect for {i.Sin}");
                 break;
         } 
-        right.QueueFree();
+        right.Destroy();
     }
 }

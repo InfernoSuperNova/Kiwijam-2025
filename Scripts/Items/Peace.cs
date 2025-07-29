@@ -4,6 +4,7 @@ namespace Kiwijam2025.Scripts.Items;
 
 public partial class Peace : Item
 {
+    public Vector2I GridPositionToSet;
     public Peace()
     {
         // set the sin, effect, and point bases
@@ -11,6 +12,11 @@ public partial class Peace : Item
         Effect = new PeaceEffect(); // We have this as a field so that effects can be swapped out at runtime
         PointGen.Base = 5;
 
+    }
+    public override void _Ready()
+    {
+        GridPosition = GridPositionToSet;
+        base._Ready();
     }
 }
 
