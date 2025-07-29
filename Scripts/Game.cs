@@ -58,7 +58,6 @@ public partial class Game : Node3D
             string name = splitFile[0];
             fileToPackedScene[name] = GD.Load<PackedScene>("res://Scenes/Items/" + splitFile.Join("."));
         }
-        GD.Print(fileToPackedScene["Sword"]);
         I = this;
     }
 
@@ -92,7 +91,6 @@ public partial class Game : Node3D
         foreach (Item item in Item.All)
         {
             item.original = item.PointGen;
-            GD.Print("Item original ", item.original);
         }
         foreach (Item item in Item.All)
         {
@@ -104,7 +102,6 @@ public partial class Game : Node3D
         foreach (Item item in Item.All)
         {
             item.PointGen = item.original;
-            GD.Print("Item original ", item.PointGen);
         }
 
         pointsText.Text = "Points: " + PlayerWallet.Points;
