@@ -90,7 +90,7 @@ public partial class Game : Node3D
 
         foreach (Item item in Item.All)
         {
-            item.original = item.PointGen;
+            item.OriginalPointGen = item.PointGen;
         }
         foreach (Item item in Item.All)
         {
@@ -101,7 +101,7 @@ public partial class Game : Node3D
         }
         foreach (Item item in Item.All)
         {
-            item.PointGen = item.original;
+            item.PointGen = item.OriginalPointGen;
         }
 
         pointsText.Text = "Points: " + PlayerWallet.Points;

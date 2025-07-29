@@ -109,7 +109,7 @@ public abstract partial class Item : Node3D
 
     public Sin Sin;
 
-    public PointGen original;
+    
 
 
     private Vector2I _gridPosition = new Vector2I(-1, -1);
@@ -143,6 +143,7 @@ public abstract partial class Item : Node3D
     #region pointgen
     
     public PointGen PointGen;
+    public PointGen OriginalPointGen;
 
     #endregion
     

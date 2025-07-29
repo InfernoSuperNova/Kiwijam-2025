@@ -32,7 +32,7 @@ public partial class SwordEffect : ItemEffect
         {
             case Sin.Pride:
                 GD.Print("Sword effect: Permanently add 3 points to sword base)");
-                i.original.Base += 3;
+                i.OriginalPointGen.Base += 3;
                 break;
 
             case Sin.Greed:
@@ -40,7 +40,7 @@ public partial class SwordEffect : ItemEffect
                 var left = i.GetRelative(new Vector2I(-1, 0));
                 if (left == null || left.Sin != Sin.Wrath)
                     break;
-                left.original.Base += right.PointGen.Base;
+                left.OriginalPointGen.Base += right.PointGen.Base;
                 break;
 
             case Sin.Envy:
