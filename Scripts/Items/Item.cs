@@ -79,6 +79,7 @@ public abstract partial class Item : Node3D
     public override void _ExitTree()
     {
         Items.Remove(this);
+        ItemGrid.Remove(_gridPosition);
     }
 
     public virtual void _ActivateItem()
@@ -155,6 +156,12 @@ public abstract partial class Item : Node3D
     public Item()
     {
         PointGen.Mul = 1;
+    }
+
+    public void Destroy()
+    {
+        QueueFree();
+        // Game.I.
     }
     #endregion
     #endregion
