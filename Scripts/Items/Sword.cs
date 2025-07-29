@@ -31,16 +31,16 @@ public partial class SwordEffect : ItemEffect
         switch (right.Sin)
         {
             case Sin.Pride:
-                GD.Print("Sword effect: Set all points to 20 (placeholder, set player wallet points)");
-                var left = i.GetRelative(new Vector2I(-1, 0));
-                if (left == null || left.Sin != Sin.Wrath)
-                    break;
-                left.PointGen.Base += right.PointGen.Base;
+                GD.Print("Sword effect: Permanently add 3 points to sword base)");
+                i.original.Base += 3;
                 break;
 
             case Sin.Greed:
-                GD.Print("Sword effect: Give 5 MP (placeholder, set player wallet points)");
-                PlayerWallet.Points += 5;
+                GD.Print("Sword effect: Permanently add base points of item on right to wrath item on left");
+                var left = i.GetRelative(new Vector2I(-1, 0));
+                if (left == null || left.Sin != Sin.Wrath)
+                    break;
+                left.original.Base += right.PointGen.Base;
                 break;
 
             case Sin.Envy:
