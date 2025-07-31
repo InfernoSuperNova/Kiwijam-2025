@@ -1,9 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://d2p8ueh166x7v"]
+[gd_scene load_steps=7 format=3 uid="uid://d2p8ueh166x7v"]
 
-[ext_resource type="Script" uid="uid://dneay810y0sb8" path="res://Scripts/Items/Ladybeetle.cs" id="1_8r51b"]
-[ext_resource type="PackedScene" uid="uid://db06jprd7iyrc" path="res://Models/ladybeetle v3.fbx" id="2_g3bgv"]
+[ext_resource type="Script" uid="uid://c73tbumt806g7" path="res://Scripts/Items/Ladybeetle.cs" id="1_8r51b"]
+[ext_resource type="ArrayMesh" uid="uid://bu0issfm1x1ik" path="res://Models/ladybeetle v3 rotated.obj" id="2_klr4j"]
+[ext_resource type="Texture2D" uid="uid://mapryarmlgcw" path="res://Textures/ladybeetle-shell_Base-Colour.png" id="3_xhe5o"]
+[ext_resource type="Texture2D" uid="uid://dhge0nbg6m4vb" path="res://Textures/ladybeetle-body_Base-Colour.png" id="4_hlqbb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ig23m"]
+albedo_texture = ExtResource("3_xhe5o")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vmppy"]
+albedo_texture = ExtResource("4_hlqbb")
 
 [node name="Ladybeetle" type="Node3D"]
 script = ExtResource("1_8r51b")
 
-[node name="ladybeetle v3" parent="." instance=ExtResource("2_g3bgv")]
+[node name="ladybeetle v3 rotated" type="MeshInstance3D" parent="."]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0)
+mesh = ExtResource("2_klr4j")
+surface_material_override/0 = SubResource("StandardMaterial3D_ig23m")
+surface_material_override/1 = SubResource("StandardMaterial3D_vmppy")
